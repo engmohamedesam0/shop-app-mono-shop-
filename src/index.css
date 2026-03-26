@@ -1,0 +1,59 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #f2ede4;
+  --card-bg: #e8e0d2;
+  --white: #faf7f2;
+  --text: #1e3a2f;
+  --text-muted: #6b8878;
+  --border: #c8bfaf;
+  --accent: #e8874a;
+  --accent-deep: #c0432a;
+  --green: #2d6b5a;
+  --green-mid: #5a9a82;
+  --green-light: #8fbc9e;
+  --sky: #7eb8cc;
+  --sky-dark: #3a82a0;
+  --orange: #e8a050;
+  --cream: #f5efe3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--green-light);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green-mid);
+}
+
+/* Selection */
+::selection {
+  background: var(--sky);
+  color: var(--white);
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}

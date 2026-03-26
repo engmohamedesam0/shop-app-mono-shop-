@@ -1,0 +1,150 @@
+.cart { padding-top: 64px; min-height: 100vh; }
+.cart-header { border-bottom: 1px solid var(--border); padding: 3rem; background: var(--cream); }
+.cart-header-inner { max-width: 1100px; margin: 0 auto; }
+.cart-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.5rem;
+  letter-spacing: 0.05em;
+  color: var(--green); line-height: 1;
+}
+.cart-count {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* Empty */
+.cart-empty {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 1rem; padding: 8rem 3rem; text-align: center;
+}
+.empty-icon { font-size: 3rem; color: var(--green-light); display: block; }
+.cart-empty h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.8rem; color: var(--green);
+}
+.cart-empty p {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-muted); margin-bottom: 1rem;
+}
+.btn-primary {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background: var(--green);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none; transition: background 0.2s;
+}
+.btn-primary:hover { background: var(--green-mid); }
+
+/* Layout */
+.cart-layout {
+  max-width: 1100px; margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 4rem; padding: 3rem;
+  align-items: start;
+}
+
+/* Items */
+.cart-items-header {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.align-right { text-align: right; }
+.clear-btn {
+  margin-top: 1.5rem;
+  background: none;
+  border: 1px solid var(--border);
+  padding: 0.5rem 1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+.clear-btn:hover { border-color: var(--accent-deep); color: var(--accent-deep); }
+
+/* Summary */
+.order-summary {
+  border: 1px solid var(--border);
+  padding: 2rem;
+  position: sticky; top: 84px;
+  background: var(--cream);
+}
+.summary-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem; letter-spacing: 0.05em;
+  color: var(--green); margin-bottom: 1.5rem;
+}
+.summary-lines {
+  display: flex; flex-direction: column;
+  gap: 0.75rem; padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.summary-line {
+  display: flex; justify-content: space-between;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.875rem; color: var(--text-muted);
+}
+.free {
+  font-style: normal;
+  color: var(--green-mid);
+  font-weight: 500;
+}
+.shipping-note {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem; color: var(--accent);
+  margin-top: 0.25rem;
+}
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 1.5rem 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.875rem; font-weight: 500;
+  color: var(--green);
+}
+.summary-total span:last-child {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5rem;
+}
+.checkout-btn {
+  width: 100%; padding: 1rem;
+  background: var(--green); color: var(--white);
+  border: none; cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  transition: background 0.2s;
+}
+.checkout-btn:hover { background: var(--green-mid); }
+.continue-link {
+  display: block; text-align: center;
+  margin-top: 1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-decoration: none; transition: color 0.2s;
+}
+.continue-link:hover { color: var(--green); }
+
+@media (max-width: 768px) {
+  .cart-layout { grid-template-columns: 1fr; padding: 1.5rem; gap: 2rem; }
+  .order-summary { position: static; }
+}
