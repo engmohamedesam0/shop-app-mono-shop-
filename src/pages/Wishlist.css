@@ -1,0 +1,67 @@
+.wishlist-page {
+  padding: 3rem 0;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--color-primary);
+}
+
+.wishlist-empty {
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.wishlist-empty-icon {
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+  opacity: 0.5;
+}
+
+.wishlist-empty h2 {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-primary);
+}
+
+.wishlist-empty p {
+  color: var(--color-text-muted);
+  font-size: 1.125rem;
+  max-width: 500px;
+  margin: 0 auto 1.5rem;
+}
+
+.wishlist-content {
+  animation: fadeIn var(--transition-normal) forwards;
+}
+
+.wishlist-item-wrapper {
+  position: relative;
+}
+
+.wishlist-remove-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-danger);
+  z-index: 2;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.wishlist-remove-btn:hover {
+  background: var(--color-danger);
+  color: white;
+  transform: scale(1.1);
+}
